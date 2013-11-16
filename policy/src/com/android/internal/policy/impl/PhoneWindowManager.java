@@ -503,7 +503,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     dispatchMediaKeyWithWakeLockToAudioService((KeyEvent)msg.obj);
                     dispatchMediaKeyWithWakeLockToAudioService(
                         KeyEvent.changeAction((KeyEvent)msg.obj, KeyEvent.ACTION_UP));
-                break;
+                    break;
             }
         }
     }
@@ -1176,7 +1176,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 updateRotation = true;
                 updateOrientationListenerLp();
             }
-            
+
             mVolumeWakeScreen = Settings.System.getIntForUser(resolver,
                     Settings.System.VOLUME_WAKE_SCREEN, 0, UserHandle.USER_CURRENT) != 0;
 
@@ -3891,7 +3891,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         if (keyCode == KeyEvent.KEYCODE_POWER) {
             policyFlags |= WindowManagerPolicy.FLAG_WAKE;
         }
-        
+
         // no volume wake handling if screen off because of proxy sensor
         final boolean isOffByProx =
             (mScreenOffReason == WindowManagerPolicy.OFF_BECAUSE_OF_PROX_SENSOR);

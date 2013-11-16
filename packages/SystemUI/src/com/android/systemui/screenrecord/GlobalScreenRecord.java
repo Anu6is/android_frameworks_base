@@ -23,6 +23,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.Handler;
@@ -105,7 +106,6 @@ class GlobalScreenRecord {
         mNotificationManager
                         .notify(SCREENRECORD_NOTIFICATION_ID, createRunningNotification(mContext));
                         
-        //Send to background
         mScreenRecorder.setPriority(Thread.MIN_PRIORITY);
     }
 
@@ -139,6 +139,14 @@ class GlobalScreenRecord {
 
         mNotificationManager.notify(SCREENRECORD_NOTIFICATION_ID,
                 createFinishedNotification(mContext, newFileName));
+
+        MediaScannerConnection.scanFile(mContext,
+                new String[] { newFileName.getAbsolutePath() }, null,
+                new MediaScannerConnection.OnScanCompletedListener() {
+                public void onScanCompleted(String path, Uri uri) {
+                    // Show in gallery
+			    }
+            });
     }
 
     public boolean isRecording(){

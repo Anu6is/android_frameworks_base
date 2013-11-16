@@ -325,8 +325,8 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
 
         // next: screenrecord
         mItems.add(
-            new SinglePressAction(R.drawable.ic_lock_screenshot,
-                        R.string.global_action_screenshot) {
+            new SinglePressAction(R.drawable.ic_lock_screenrecord,
+                        R.string.global_action_screenrecord) {
                 public void onPress() {
                     mHandler.postDelayed(new Runnable() {
                         public void run() {
