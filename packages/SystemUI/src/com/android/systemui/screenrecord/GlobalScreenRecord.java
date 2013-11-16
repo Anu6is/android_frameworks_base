@@ -143,10 +143,10 @@ class GlobalScreenRecord {
         MediaScannerConnection.scanFile(mContext,
                 new String[] { newFileName.getAbsolutePath() }, null,
                 new MediaScannerConnection.OnScanCompletedListener() {
-                public void onScanCompleted(String path, Uri uri) {
-                    // Show in gallery
-			    }
-            });
+                    public void onScanCompleted(String path, Uri uri) {
+                        // Show in gallery
+			        }
+                });
     }
 
     public boolean isRecording(){
