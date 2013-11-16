@@ -145,7 +145,7 @@ class GlobalScreenRecord {
                 new MediaScannerConnection.OnScanCompletedListener() {
                     public void onScanCompleted(String path, Uri uri) {
                         // Show in gallery
-			        }
+                    }
                 });
     }
 
