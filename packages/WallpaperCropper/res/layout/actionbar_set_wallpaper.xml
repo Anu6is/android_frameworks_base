@@ -22,13 +22,27 @@
     style="?android:actionButtonStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    <TextView style="?android:actionBarTabTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start|center_vertical"
-        android:paddingRight="20dp"
-        android:drawableLeft="@drawable/ic_actionbar_accept"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:text="@string/wallpaper_instructions" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+        <TextView style="?android:actionBarTabTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:paddingRight="20dp"
+            android:drawableLeft="@drawable/ic_actionbar_accept"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/crop_wallpaper" />
+        <TextView style="?android:actionBarTabTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/ic_actionbar_accept"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/crop_wallpaper" />
+    </LinearLayout>
 </FrameLayout>
